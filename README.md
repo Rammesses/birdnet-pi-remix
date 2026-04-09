@@ -18,45 +18,7 @@ A browser-based React prototype simulates the device display and buttons at 4× 
 Detection, History), all button interactions, auto-cycling detections, and the dim
 timer.
 
-### Prerequisites
-
-The prototype requires **Node.js** (v18+) and runs via [Vite](https://vitejs.dev).
-
-#### Linux / WSL (Debian/Ubuntu)
-
-```bash
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-#### macOS
-
-```bash
-brew install node
-```
-
-#### Windows (native)
-
-Download and install from [nodejs.org](https://nodejs.org).
-
----
-
-### Running the prototype
-
-```bash
-cd prototype
-./run.sh
-```
-
-On first run, `run.sh` will:
-1. Scaffold a Vite + React project in the `prototype/` directory
-2. Install npm dependencies (~30s, requires internet)
-3. Start the dev server at **http://localhost:5173**
-
-Subsequent runs skip the scaffold and start immediately.
-
-> **Windows native:** `run.sh` is a bash script. Run it from WSL, Git Bash, or
-> adapt the commands manually.
+See [`prototype/README.md`](prototype/README.md) for setup and running instructions.
 
 ---
 
