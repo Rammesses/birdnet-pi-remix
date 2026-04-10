@@ -1,0 +1,29 @@
+birdnet:
+  sensitivity: 1.0
+  threshold: 0.7
+  overlap: 1.5
+  locale: en
+
+input:
+  source: alsa
+  device: "hw:0,0"
+  sample_rate: 48000
+
+realtime:
+  enabled: true
+
+mqtt:
+  enabled: true
+  broker: localhost
+  port: 1883
+  topic: birdnet/detection
+
+birdweather:
+  enabled: false
+  token: ""
+  locationaccuracy: 500
+
+output:
+  sqlite:
+    enabled: true
+    path: /var/lib/birdnet-go/detections.db

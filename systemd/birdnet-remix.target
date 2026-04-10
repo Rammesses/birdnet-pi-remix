@@ -1,0 +1,7 @@
+[Unit]
+Description=BirdNET Remix Services
+Requires=mosquitto.service birdnet-go.service birdnet-display.service birdnet-power.service
+After=mosquitto.service birdnet-go.service birdnet-display.service birdnet-power.service
+
+[Install]
+WantedBy=multi-user.target

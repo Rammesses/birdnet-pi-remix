@@ -1,0 +1,12 @@
+[Unit]
+Description=BirdNET-Pi Remix Power Manager
+After=multi-user.target
+
+[Service]
+User=root
+ExecStart=/opt/birdnet-remix/venv/bin/python3 /opt/birdnet-remix/power/daemon.py
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=birdnet-remix.target

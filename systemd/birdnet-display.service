@@ -1,0 +1,13 @@
+[Unit]
+Description=BirdNET-Pi Remix Display Daemon
+After=mosquitto.service
+Requires=mosquitto.service
+
+[Service]
+User=birdnet
+ExecStart=/opt/birdnet-remix/venv/bin/python3 /opt/birdnet-remix/display/daemon.py
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=birdnet-remix.target

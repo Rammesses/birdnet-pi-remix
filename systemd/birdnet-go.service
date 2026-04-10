@@ -1,0 +1,13 @@
+[Unit]
+Description=BirdNET-Go Analysis Engine
+After=mosquitto.service network.target
+Requires=mosquitto.service
+
+[Service]
+User=birdnet
+ExecStart=/usr/local/bin/birdnet-go realtime --config /etc/birdnet-go/config.yaml
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=birdnet-remix.target
