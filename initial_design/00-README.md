@@ -20,7 +20,7 @@ BirdNET-Go, and a 1.8" ST7735 colour TFT display.
 ## Status
 
 - [x] Requirements gathered
-- [ ] Plan review & approval
-- [ ] UI prototype
-- [ ] Kiro specification files
+- [x] Plan review & approval
+- [x] UI prototype
+- [x] Kiro specification files (in progress)
 - [ ] Implementation
