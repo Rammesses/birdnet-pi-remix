@@ -8,6 +8,7 @@ when Wi-Fi is available.
 
 Built using [Claude](https://claude.ai) and [Kiro](https://kiro.dev).
 Full design documentation is in [`initial_design/`](initial_design/00-README.md).
+Kiro implementation specs are in [`specifications/`](specifications/).
 
 ---
 
@@ -43,6 +44,7 @@ Auto-behaviours (prototype timings, shortened for review):
 |-------|--------|
 | Design & planning | ✅ Complete |
 | UI prototype | ✅ Complete |
+| Kiro specifications | ✅ Complete |
 | Kiro implementation | 🔲 Not started |
 | Hardware build | 🔲 Not started |
 | Documentation & release | 🔲 Not started |
