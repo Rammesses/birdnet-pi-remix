@@ -25,6 +25,9 @@ MQTT_TOPIC_DETECTION = "birdnet/detection"
 MQTT_TOPIC_BATTERY   = "birdnet/battery"
 MQTT_TOPIC_WIFI      = "birdnet/wifi_status"
 
+# Backlight levels (percent), cycled by Button A
+BACKLIGHT_LEVELS = [100, 50, 10]
+
 # Timing
 DETECTION_TIMEOUT_S  = 30   # Return to IDLE after this many seconds without a new detection
 DIM_TIMEOUT_S        = 60   # Dim display after this many seconds without a button press
