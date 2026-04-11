@@ -31,10 +31,10 @@ add_config "gpu_mem=16"
 # 4. Create birdnet system user
 id -u birdnet &>/dev/null || useradd --system --no-create-home --shell /usr/sbin/nologin birdnet
 
-# 5. Copy repository to install dir
+# 5. Copy src/ contents to install dir
 mkdir -p "$INSTALL_DIR"
-rsync -a --exclude='.git' --exclude='extras' --exclude='docs' --exclude='tests' \
-    "$REPO_DIR/" "$INSTALL_DIR/"
+rsync -a "$REPO_DIR/src/" "$INSTALL_DIR/"
+cp "$REPO_DIR/requirements.txt" "$INSTALL_DIR/"
 
 # 6. Python venv + dependencies
 python3 -m venv "$VENV"
@@ -51,21 +51,21 @@ chmod +x /usr/local/bin/birdnet-go
 
 # 8. BirdNET-Go config
 mkdir -p "$CONFIG_DIR"
-cp -n "$INSTALL_DIR/src/config/birdnet-go.yaml" "$CONFIG_DIR/config.yaml" || true
+cp -n "$INSTALL_DIR/config/birdnet-go.yaml" "$CONFIG_DIR/config.yaml" || true
 
 # 9. Mosquitto config
-cp "$INSTALL_DIR/src/config/mosquitto.conf" /etc/mosquitto/conf.d/birdnet.conf
+cp "$INSTALL_DIR/config/mosquitto.conf" /etc/mosquitto/conf.d/birdnet.conf
 
 # 10. Systemd services
-cp "$INSTALL_DIR/src/systemd/"*.service "$INSTALL_DIR/src/systemd/"*.target /etc/systemd/system/
+cp "$INSTALL_DIR/systemd/"*.service "$INSTALL_DIR/systemd/"*.target /etc/systemd/system/
 systemctl daemon-reload
 systemctl enable birdnet-remix.target
 
 # 11. Audio setup
-bash "$INSTALL_DIR/src/install/setup_audio.sh"
+bash "$INSTALL_DIR/install/setup_audio.sh"
 
 # 12. Display setup
-bash "$INSTALL_DIR/src/install/setup_display.sh"
+bash "$INSTALL_DIR/install/setup_display.sh"
 
 # 13. BirdWeather token (optional)
 read -rp "Enter BirdWeather station token (leave blank to skip): " BW_TOKEN

@@ -4,8 +4,7 @@ After=multi-user.target
 
 [Service]
 User=root
-Environment=PYTHONPATH=/opt/birdnet-remix/src
-ExecStart=/opt/birdnet-remix/venv/bin/python3 /opt/birdnet-remix/src/power/daemon.py
+ExecStart=/opt/birdnet-remix/venv/bin/python3 /opt/birdnet-remix/power/daemon.py
 Restart=on-failure
 RestartSec=5s
 

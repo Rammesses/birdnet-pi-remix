@@ -5,8 +5,7 @@ Requires=mosquitto.service
 
 [Service]
 User=birdnet
-Environment=PYTHONPATH=/opt/birdnet-remix/src
-ExecStart=/opt/birdnet-remix/venv/bin/python3 /opt/birdnet-remix/src/display/daemon.py
+ExecStart=/opt/birdnet-remix/venv/bin/python3 /opt/birdnet-remix/display/daemon.py
 Restart=on-failure
 RestartSec=3s
 
