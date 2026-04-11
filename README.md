@@ -7,8 +7,8 @@ Runs offline by default, optionally syncing detections to [BirdWeather](https://
 when Wi-Fi is available.
 
 Built using [Claude](https://claude.ai) and [Kiro](https://kiro.dev).
-Full design documentation is in [`initial_design/`](initial_design/00-README.md).
-Kiro implementation specs are in [`specifications/`](specifications/).
+Full design documentation is in [`docs/initial_design/`](docs/initial_design/00-README.md).
+Kiro implementation specs are in [`docs/specifications/`](docs/specifications/).
 
 ---
 
