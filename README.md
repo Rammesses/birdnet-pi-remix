@@ -19,7 +19,7 @@ A browser-based React prototype simulates the device display and buttons at 4× 
 Detection, History), all button interactions, auto-cycling detections, and the dim
 timer.
 
-See [`prototype/README.md`](prototype/README.md) for setup and running instructions.
+See [`extras/ui-prototype/README.md`](extras/ui-prototype/README.md) for setup and running instructions.
 
 ---
 
