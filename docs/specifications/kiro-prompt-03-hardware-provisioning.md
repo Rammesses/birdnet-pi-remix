@@ -155,8 +155,8 @@ cd birdnet-pi-remix
 ### 4.2 Run the installation script
 
 ```bash
-chmod +x install/install.sh
-sudo bash install/install.sh 2>&1 | tee ~/install.log
+chmod +x src/install/install.sh
+sudo bash src/install/install.sh 2>&1 | tee ~/install.log
 ```
 
 The script will:
